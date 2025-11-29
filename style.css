@@ -1,0 +1,373 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+  --primary-color: #9ae84f; 
+  --text-light: #ffffff;
+  --text-gray: #bfbfbf;
+  --bg-dark: #0d0d0d;
+  --bg-card: #111;
+  --transition: 0.4s ease;
+  --primary-font: Algerian;
+  --bg-image-center: no-repeat center/cover;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+/*  NAVBAR  */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  padding: 18px 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+.list-items {
+  display: inline;
+}
+
+.list-items a {
+  padding: 18px;
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.list-items a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.nav__logo h1 {
+  color: var(--text-light);
+  font-size: 2.2rem;
+  font-family: var(--primary-font);
+}
+
+span {
+  color: var(--primary-color);
+}
+
+/*  HERO SECTION  */
+.hero {
+  background: linear-gradient(to left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)),
+    url("Images/scott-blake-x-ghf9LjrVg-unsplash.jpg") var(--bg-image-center)
+      fixed;
+}
+
+.hero__headings-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10rem;
+  color: var(--text-light);
+}
+
+.hero__main-headings {
+  font-size: 5rem;
+  font-weight: bold;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO BUTTON */
+.main-btn {
+  margin-top: 25px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.main-btn:hover {
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+/*  SERVICES  */
+.main-headings {
+  font-size: 3.2rem;
+  margin: 60px 0;
+  transition: var(--transition);
+}
+
+.main-headings:hover {
+  transform: skew(10deg);
+  color: var(--primary-color);
+}
+
+/* Cards layout */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px;
+  margin: 25px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: var(--transition);
+  box-shadow: 0 0 0 transparent;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 12px var(--primary-color);
+}
+
+.card-image {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.card p {
+  color: var(--text-gray);
+  margin-top: 12px;
+}
+
+/* Image Cards */
+.img-one {
+  background: url("Images/one.jpg") var(--bg-image-center);
+}
+.img-two {
+  background: url("Images/two.jpg") var(--bg-image-center);
+}
+.img-three {
+  background: url("Images/three.jpg") var(--bg-image-center);
+}
+
+/* WHY US SECTION  */
+.main-headings{
+  margin-left: 20px;
+}
+.why-us {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.lists-container {
+  margin-left: 30px;
+  font-family: sans-serif;
+}
+
+.list {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+  margin-bottom: 25px;
+}
+
+/* Number Circle */
+.list-number {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; 
+}
+
+.list-number p {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Text */
+.list-info {
+  color: var(--text-gray);
+  max-width: 350px; 
+  line-height: 1.4; 
+  transition: var(--transition);
+}
+
+.list-info:hover {
+  transform: translateX(6px); /* Cleaner  hover effect */
+  color: var(--primary-color);
+}
+
+
+/* Owner Image */
+.owner-image {
+  background: url(Images/ruhul99.png) no-repeat top/cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 8px solid var(--primary-color);
+  margin-right: 10rem;
+  transition: var(--transition);
+}
+
+.owner-image:hover {
+  transform: scale(1.18);
+}
+
+/* PROJECT DETAILS  */
+.project-details__container-left,
+.project-details__container-right {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+  gap: 2rem;
+}
+
+.project-details-img {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--primary-color);
+  transition: var(--transition);
+}
+
+.project-details-img:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0px 0px 30px var(--primary-color);
+}
+
+.title {
+  margin-left: 40px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+/*  FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem 10rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+  margin-bottom: 25px;
+  background: transparent;
+  color: var(--text-light);
+  width: 50%;
+  transition: var(--transition);
+}
+
+input:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.form-btn {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.form-btn:hover {
+  color: var(--text-light);
+}
+
+/*  FOOTER  */
+footer {
+  background-color: #000000be;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;
+  align-items: center;
+  gap: 20px;                  
+}
+
+/* Footer links row */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Copyright + MIT License */
+.footer-copy {
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* JS Animations  */
+.card, .list, .owner-image, .project-details-img {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active navbar link highlight 
+nav ul li a.active {
+  border-bottom: 2px solid var(--primary-color);
+}
+*/
+/* Shadow to the navbar when scrolling */
+.nav-shadow {
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
